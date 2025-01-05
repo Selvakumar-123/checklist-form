@@ -12,8 +12,8 @@
 <body>
 
   <h1>Boomlift Daily Checklist</h1>
-  <canvas   width="800" height="400" style="border: 1px solid grey; background-color: yellow;">
-    <h2>
+    <canvas id="myCanvas" width="" height="" style="border:1px solid grey; background-color: yellow;"></canvas>
+    <h2 id="myText">
       Take note !!
   
   1. Only trained and certified operators should use a boom lift.
@@ -22,9 +22,9 @@
   4. Operate on stable and even surfaces.
   5. Check for power lines, ceilings, beams, or tree branches before ascending/descending.
   6. Don't leave the key on the boom lift; return it to the security guard after use .
-  7. Failure to return/loss of the key, platform housekeeping will result in  a $50 admin fee issued .
+  7. Failure to return/loss of key, platform housekeeping will result in  a $50 admin fee issued .
     </h2>
-  </canvas>
+
 
 
   <form id="checklistForm">
@@ -292,6 +292,23 @@
         alert('Error submitting form. Please try again.');
       });
     });
+
+        // Get the canvas and its 2D drawing context
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Get the text from the h2 element
+    const text = document.getElementById('myText').innerText;
+
+    // Clear the h2 element (optional, if you don't want to show it outside the canvas)
+    document.getElementById('myText').style.display = 'none';
+
+    // Set font style for the canvas
+    ctx.font = '16px Arial';
+    ctx.fillStyle = 'black'; // Text color
+
+    // Draw the text on the canvas
+    ctx.fillText(text, 10, 50);
     
    
   </script>
