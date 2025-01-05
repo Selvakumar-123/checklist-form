@@ -10,25 +10,11 @@
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 </head>
 <body>
-<canvas id="myCanvas" class="cautionCanvas" width="100%" height="100%">
+
   <h1>Boomlift Daily Checklist</h1>
-  <h2>Take note !! </h2>
-  <h2>1.Only trained and certified operators should use a boom lift.
-  <br></br>
-  2.Wear hard hats, full body safety harnesses and non-slip footwear.
-  <br></br>
-  3.Always hook your safety harness to designated anchor points.
-  <br></br>
-  4.Operate on stable and even surfaces.
-  <br></br>
-  5.Check for power lines, ceilings, beams, or tree branches before ascend /descend platform.
-  <br></br>
-  6.Don't left key on boomlift  , no use return to security guard 
-  <br></br>
-  7.Failed to return  / loss of key , platform housekeeping after use admin fees  $50 will be issued .
-  <br></br>
-  </h2>
-  </canvas>
+  <canvas id="myCanvas" class="cautionCanvas" width="800" height="400" style="border: 1px solid grey; background-color: yellow;"></canvas>
+
+
   <form id="checklistForm">
     <table>
       <thead>
@@ -295,7 +281,34 @@
       });
     });
     
-    
+    const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set font style and size
+  ctx.font = '16px Arial';
+  ctx.fillStyle = 'black'; // Text color
+
+  // Define the text content
+  const text = `
+  
+  Take note !!
+  
+  1. Only trained and certified operators should use a boom lift.
+  2. Wear hard hats, full body safety harnesses, and non-slip footwear.
+  3. Always hook your safety harness to designated anchor points.
+  4. Operate on stable and even surfaces.
+  5. Check for power lines, ceilings, beams, or tree branches before ascending/descending.
+  6. Don't leave the key on the boom lift; return it to the security guard.
+  7. Failure to return/loss of the key will result in platform housekeeping and a $50 admin fee.
+  `;
+
+  // Split the text into lines for better readability
+  const lines = text.split('\n');
+  let y = 20; // Starting y-coordinate for the text
+  lines.forEach((line) => {
+    ctx.fillText(line.trim(), 10, y); // Draw each line of text
+    y += 20; // Move to the next line
+  });
   </script>
   <script src="script.js"></script>
 
