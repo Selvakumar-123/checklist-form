@@ -1,0 +1,110 @@
+body {
+  font-family: sans-serif;
+  margin: 20px; /* Add some margin around the page */
+}
+
+h2 {
+  text-align: padding-left; /* Center the main heading */
+  margin-bottom: 20px;
+}
+    .take-note {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .take-note ol {
+      margin: 0; /* Remove default margin */
+      padding-left: 20px; /* Adjust for list numbers */
+    }
+
+    .take-note li {
+      text-align: left; /* Align text to the left */
+      margin-bottom: 5px;
+    }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray background for header cells */
+  font-weight: bold;
+}
+
+/* Zebra striping for table rows */
+tbody tr:nth-child(even) {
+  background-color: #f8f8f8; /* Slightly darker gray for even rows */
+}
+
+/* Category styling */
+td[rowspan] {
+  font-weight: bold;
+  background-color: #e6e6e6; /* Light gray background for category cells */
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin: 0; /* Remove default margin */
+  width: 18px; /* Set checkbox size */
+  height: 18px;
+}
+
+/* Remarks input field styling */
+input[type="text"] {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Operator, Company, and Signature section */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block; /* Labels on their own line */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-section input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Signature pad */
+.signature-pad {
+  border: 1px solid black;
+}
+
+/* Clear button */
+#clearSignature {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Submit button */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green submit button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}

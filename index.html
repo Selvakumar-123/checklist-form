@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEWP Checklist</title>
+  
+  <link rel="stylesheet" href="styles.css">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+</head>
+<body>
+
+  <h1>Boomlift Daily Checklist</h1>
+  <h2>Take note !! </h2>
+  <h2>1.Only trained and certified operators should use a boom lift.
+  <br></br>
+  2.Wear hard hats, safety harnesses, lanyards, and non-slip footwear.
+  <br></br>
+  3.Always attach your safety harness to designated anchor points.
+  <br></br>
+  4.Operate on stable and even surfaces.
+  <br></br>
+  5.Check for power lines, ceilings, beams, or tree branches.
+  <br></br>
+  6.Don't left key on machineries , no use return to security guard 
+  <br></br>
+  7.Failed to return ,clean platform / loss of key $50 will be deduct from salary account
+  <br></br>
+  </h2>
+  <canvas> </canvas>
+  <form id="checklistForm">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Item</th>
+          <th>OK</th>
+          <th>Not OK</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="5">1. Structure</td>
+          <td>Chassis</td>
+          <td><input type="checkbox" name="chassis_ok"></td>
+          <td><input type="checkbox" name="chassis_not_ok"></td>
+          <td><input type="text" name="chassis_remarks"></td>
+        </tr>
+        <tr>
+          <td>Boom</td>
+          <td><input type="checkbox" name="boom_ok"></td>
+          <td><input type="checkbox" name="boom_not_ok"></td>
+          <td><input type="text" name="boom_remarks"></td>
+        </tr>
+        <tr>
+          <td>Axle</td>
+          <td><input type="checkbox" name="axle_ok"></td>
+          <td><input type="checkbox" name="axle_not_ok"></td>
+          <td><input type="text" name="axle_remarks"></td>
+        </tr>
+        <tr>
+          <td>Turn table</td>
+          <td><input type="checkbox" name="turntable_ok"></td>
+          <td><input type="checkbox" name="turntable_not_ok"></td>
+          <td><input type="text" name="turntable_remarks"></td>
+        </tr>
+        <tr>
+          <td>Platform</td>
+          <td><input type="checkbox" name="platform_ok"></td>
+          <td><input type="checkbox" name="platform_not_ok"></td>
+          <td><input type="text" name="platform_remarks"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="6">2. Engine</td>
+          <td>Start-stop operation</td>
+          <td><input type="checkbox" name="startstop_ok"></td>
+          <td><input type="checkbox" name="startstop_not_ok"></td>
+          <td><input type="text" name="startstop_remarks"></td>
+        </tr>
+        <tr>
+          <td>Engine oil level</td>
+          <td><input type="checkbox" name="engineoil_ok"></td>
+          <td><input type="checkbox" name="engineoil_not_ok"></td>
+          <td><input type="text" name="engineoil_remarks"></td>
+        </tr>
+        <tr>
+          <td>Engine fan belt</td>
+          <td><input type="checkbox" name="fanbelt_ok"></td>
+          <td><input type="checkbox" name="fanbelt_not_ok"></td>
+          <td><input type="text" name="fanbelt_remarks"></td>
+        </tr>
+        <tr>
+          <td>Radiator water level</td>
+          <td><input type="checkbox" name="radiatorwater_ok"></td>
+          <td><input type="checkbox" name="radiatorwater_not_ok"></td>
+          <td><input type="text" name="radiatorwater_remarks"></td>
+        </tr>
+        <tr>
+          <td>Oil leakage</td>
+          <td><input type="checkbox" name="engineoilleak_ok"></td>
+          <td><input type="checkbox" name="engineoilleak_not_ok"></td>
+          <td><input type="text" name="engineoilleak_remarks"></td>
+        </tr>
+        <tr>
+          <td>Exhaust</td>
+          <td><input type="checkbox" name="exhaust_ok"></td>
+          <td><input type="checkbox" name="exhaust_not_ok"></td>
+          <td><input type="text" name="exhaust_remarks"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">3. Hydraulic</td>
+          <td>Oil level</td>
+          <td><input type="checkbox" name="hydoil_ok"></td>
+          <td><input type="checkbox" name="hydoil_not_ok"></td>
+          <td><input type="text" name="hydoil_remarks"></td>
+        </tr>
+        <tr>
+          <td>Oil Leakage</td>
+          <td><input type="checkbox" name="hydoilleak_ok"></td>
+          <td><input type="checkbox" name="hydoilleak_not_ok"></td>
+          <td><input type="text" name="hydoilleak_remarks"></td>
+        </tr>
+        <tr>
+          <td>Hose condition</td>
+          <td><input type="checkbox" name="hose_ok"></td>
+          <td><input type="checkbox" name="hose_not_ok"></td>
+          <td><input type="text" name="hose_remarks"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="5">4. Electrical System</td>
+          <td>Ground/Platform station</td>
+          <td><input type="checkbox" name="groundplatform_ok"></td>
+          <td><input type="checkbox" name="groundplatform_not_ok"></td>
+          <td><input type="text" name="groundplatform_remarks"></td>
+        </tr>
+        <tr>
+          <td>Emergency stop / circuit</td>
+          <td><input type="checkbox" name="emergencystop_ok"></td>
+          <td><input type="checkbox" name="emergencystop_not_ok"></td>
+          <td><input type="text" name="emergencystop_remarks"></td>
+        </tr>
+        <tr>
+          <td>Foot switch</td>
+          <td><input type="checkbox" name="footswitch_ok"></td>
+          <td><input type="checkbox" name="footswitch_not_ok"></td>
+          <td><input type="text" name="footswitch_remarks"></td>
+        </tr>
+        <tr>
+          <td>Wiring condition</td>
+          <td><input type="checkbox" name="wiring_ok"></td>
+          <td><input type="checkbox" name="wiring_not_ok"></td>
+          <td><input type="text" name="wiring_remarks"></td>
+        </tr>
+        <tr>
+          <td>Battery connection</td>
+          <td><input type="checkbox" name="battery_ok"></td>
+          <td><input type="checkbox" name="battery_not_ok"></td>
+          <td><input type="text" name="battery_remarks"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="4">5. Operation Test</td>
+          <td>Travelling</td>
+          <td><input type="checkbox" name="travelling_ok"></td>
+          <td><input type="checkbox" name="travelling_not_ok"></td>
+          <td><input type="text" name="travelling_remarks"></td>
+        </tr>
+        <tr>
+          <td>Swing</td>
+          <td><input type="checkbox" name="swing_ok"></td>
+          <td><input type="checkbox" name="swing_not_ok"></td>
+          <td><input type="text" name="swing_remarks"></td>
+        </tr>
+        <tr>
+          <td>Boom up and down</td>
+          <td><input type="checkbox" name="boomupdown_ok"></td>
+          <td><input type="checkbox" name="boomupdown_not_ok"></td>
+          <td><input type="text" name="boomupdown_remarks"></td>
+        </tr>
+        <tr>
+          <td>Tele in and out</td>
+          <td><input type="checkbox" name="tele_ok"></td>
+          <td><input type="checkbox" name="tele_not_ok"></td>
+          <td><input type="text" name="tele_remarks"></td>
+        </tr>
+
+        <tr>
+          <td rowspan="6">6. Cleanliness & Safety Guard</td>
+          <td>Body</td>
+          <td><input type="checkbox" name="body_ok"></td>
+          <td><input type="checkbox" name="body_not_ok"></td>
+          <td><input type="text" name="body_remarks"></td>
+        </tr>
+        <tr>
+          <td>Radiator</td>
+          <td><input type="checkbox" name="radiator_ok"></td>
+          <td><input type="checkbox" name="radiator_not_ok"></td>
+          <td><input type="text" name="radiator_remarks"></td>
+        </tr>
+        <tr>
+          <td>Overhead Guard</td>
+          <td><input type="checkbox" name="overheadguard_ok"></td>
+          <td><input type="checkbox" name="overheadguard_not_ok"></td>
+          <td><input type="text" name="overheadguard_remarks"></td>
+        </tr>
+        <tr>
+          <td>Overhead Guard Clamp</td>
+          <td><input type="checkbox" name="overheadclamp_ok"></td>
+          <td><input type="checkbox" name="overheadclamp_not_ok"></td>
+          <td><input type="text" name="overheadclamp_remarks"></td>
+        </tr>
+        <tr>
+          <td>Hyd. Tank Safety Cover</td>
+          <td><input type="checkbox" name="hydtank_ok"></td>
+          <td><input type="checkbox" name="hydtank_not_ok"></td>
+          <td><input type="text" name="hydtank_remarks"></td>
+        </tr>
+        <tr>
+          <td>Platform Hand Guard</td>
+          <td><input type="checkbox" name="platformhandguard_ok"></td>
+          <td><input type="checkbox" name="platformhandguard_not_ok"></td>
+          <td><input type="text" name="platformhandguard_remarks"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <label for="operatorName">Operator Name:</label>
+      <input type="text" id="operatorName" name="operatorName"  required>
+    </div>
+    <br></br>
+    <div>
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName"  required>
+    </div>
+    <br></br>
+    <div>
+      <label for="signature">Signature:</label>
+      <canvas id="signature" class="signature-pad" width="400" height="200"></canvas>
+      <input type="hidden" id="signatureData" name="signatureData"  required>
+      <button type="button" id="clearSignature">Clear</button>
+    </div>
+   <br></br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Initialize Signature Pad
+    const canvas = document.getElementById('signature');
+    const signaturePad = new SignaturePad(canvas);
+
+    document.getElementById('clearSignature').addEventListener('click', () => {
+      signaturePad.clear();
+    });
+
+    // Handle Form Submission
+    const form = document.getElementById('checklistForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Get signature data
+      const signatureData = signaturePad.toDataURL();
+      document.getElementById('signatureData').value = signatureData;
+
+      // Collect form data
+      const formData = new FormData(form);
+      const data = {};
+      for (const [key, value] of formData) {
+        data[key] = value;
+      }
+
+      // Prepare data for Google Apps Script
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxoM_sfPySCsBcbpbWBPFk6Qr9llLQCjVXSU8go6eIXDlfbbDlGgljLQH6nwlm9ALC2/exec'; // Replace with your script URL
+
+      // Send data to Google Apps Script
+      fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for sending data to Apps Script
+        body: JSON.stringify(data),
+      })
+      .then(response => {
+        console.log('Success!', response);
+        alert('Form submitted successfully!');
+        form.reset();
+        signaturePad.clear();
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert('Error submitting form. Please try again.');
+      });
+    });
+    
+    
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
