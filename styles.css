@@ -108,3 +108,10 @@ button[type="submit"] {
   cursor: pointer;
   font-weight: bold;
 }
+
+.cautionCanvas {
+  border: 1px solid grey;
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+}
